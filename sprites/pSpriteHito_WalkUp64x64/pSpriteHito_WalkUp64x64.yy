@@ -34,7 +34,7 @@
   "origin": 0,
   "parent": {
     "name": "Hito",
-    "path": "folders/Sprites/Personagens/Hito.yy",
+    "path": "folders/Sprites/Personagens/Movimentação/Hito.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

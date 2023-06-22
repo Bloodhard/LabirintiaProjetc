@@ -34,7 +34,7 @@
   "origin": 4,
   "parent": {
     "name": "Godhard",
-    "path": "folders/Sprites/Personagens/Godhard.yy",
+    "path": "folders/Sprites/Personagens/Movimentação/Godhard.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -34,7 +34,7 @@
   "origin": 0,
   "parent": {
     "name": "Mudinho",
-    "path": "folders/Sprites/Personagens/Mudinho.yy",
+    "path": "folders/Sprites/Personagens/Movimentação/Mudinho.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

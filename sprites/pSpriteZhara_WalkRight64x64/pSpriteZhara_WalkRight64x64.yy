@@ -34,7 +34,7 @@
   "origin": 0,
   "parent": {
     "name": "Zhara",
-    "path": "folders/Sprites/Personagens/Zhara.yy",
+    "path": "folders/Sprites/Personagens/Movimentação/Zhara.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

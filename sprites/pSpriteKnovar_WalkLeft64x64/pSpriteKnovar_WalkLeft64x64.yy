@@ -34,7 +34,7 @@
   "origin": 0,
   "parent": {
     "name": "Knovar",
-    "path": "folders/Sprites/Personagens/Knovar.yy",
+    "path": "folders/Sprites/Personagens/Movimentação/Knovar.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
