@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite11",
-    "path": "sprites/Sprite11/Sprite11.yy",
+    "name": "sSlime",
+    "path": "sprites/sSlime/sSlime.yy",
   },
   "spriteMaskId": null,
   "visible": true,

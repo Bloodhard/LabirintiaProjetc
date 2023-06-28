@@ -12,8 +12,8 @@ global.party =
 		sprite: { idle: sGodhardIdle, attack: sGodhardattack, defend:sGodhardattack, down: sGodhardattack },
 		actions: []
 	}
-	,
-/*	{
+/*	,
+	{
 		name: "Zarah",
 		hp: 89,
 		hpMax:89,
