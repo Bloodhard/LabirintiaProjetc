@@ -1,0 +1,2 @@
+//Randomiza as Seeds
+randomize();

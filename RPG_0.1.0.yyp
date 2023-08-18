@@ -44,6 +44,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Zhara","folderPath":"folders/Sprites/Personagens/Movimentação/Zhara.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Set","folderPath":"folders/Tile Set.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"animal_pele_01.png","CopyToMask":-1,"filePath":"datafiles/texturas/128x128",},
@@ -824,7 +825,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"oSlime","path":"objects/oSlime/oSlime.yy",},},
@@ -846,6 +847,8 @@
     {"id":{"name":"sSlimeAttack","path":"sprites/sSlimeAttack/sSlimeAttack.yy",},},
     {"id":{"name":"pSpriteKnovar_WalkUp64x64","path":"sprites/pSpriteKnovar_WalkUp64x64/pSpriteKnovar_WalkUp64x64.yy",},},
     {"id":{"name":"Caverna1","path":"rooms/Caverna1/Caverna1.yy",},},
+    {"id":{"name":"Init","path":"scripts/Init/Init.yy",},},
+    {"id":{"name":"fnM3x6","path":"fonts/fnM3x6/fnM3x6.yy",},},
     {"id":{"name":"pSpriteMudinho_WalkDown64x64","path":"sprites/pSpriteMudinho_WalkDown64x64/pSpriteMudinho_WalkDown64x64.yy",},},
     {"id":{"name":"pSpriteGodhard_WalkDown64x64","path":"sprites/pSpriteGodhard_WalkDown64x64/pSpriteGodhard_WalkDown64x64.yy",},},
     {"id":{"name":"pSpriteHito_WalkLeft64x64","path":"sprites/pSpriteHito_WalkLeft64x64/pSpriteHito_WalkLeft64x64.yy",},},

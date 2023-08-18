@@ -31,6 +31,7 @@
     {"name":"Zhara","order":4,"path":"folders/Sprites/Personagens/Movimentação/Zhara.yy",},
     {"name":"UI","order":17,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Set","order":16,"path":"folders/Tile Set.yy",},
+    {"name":"Fonts","order":17,"path":"folders/Fonts.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oSlime","order":10,"path":"objects/oSlime/oSlime.yy",},
@@ -45,6 +46,7 @@
     {"name":"sSlimeAttack","order":1,"path":"sprites/sSlimeAttack/sSlimeAttack.yy",},
     {"name":"pSpriteKnovar_WalkUp64x64","order":3,"path":"sprites/pSpriteKnovar_WalkUp64x64/pSpriteKnovar_WalkUp64x64.yy",},
     {"name":"Caverna1","order":1,"path":"rooms/Caverna1/Caverna1.yy",},
+    {"name":"Init","order":3,"path":"scripts/Init/Init.yy",},
     {"name":"pSpriteMudinho_WalkDown64x64","order":3,"path":"sprites/pSpriteMudinho_WalkDown64x64/pSpriteMudinho_WalkDown64x64.yy",},
     {"name":"pSpriteHito_WalkLeft64x64","order":1,"path":"sprites/pSpriteHito_WalkLeft64x64/pSpriteHito_WalkLeft64x64.yy",},
     {"name":"pSpriteKnovar_WalkRight64x64","order":4,"path":"sprites/pSpriteKnovar_WalkRight64x64/pSpriteKnovar_WalkRight64x64.yy",},
