@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Mudinho",
-    "path": "folders/Sprites/Personagens/Movimentação/Mudinho.yy",
+    "name": "Corvo",
+    "path": "folders/Sprites/Personagens/Movimentação/Corvo.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

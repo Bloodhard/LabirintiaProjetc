@@ -6,4 +6,8 @@
 // Inherit the parent event
 event_inherited();
 
-image_xscale = -1;
+function ManipularXscaleSpriteInimigo(){
+	image_xscale = -1;
+}
+
+ManipularXscaleSpriteInimigo();

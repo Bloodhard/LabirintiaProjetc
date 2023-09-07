@@ -4,7 +4,7 @@ global.party =
 [
 	{
 		name: "Godhard",
-		hp: 100,
+		hp: 50,
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
@@ -47,7 +47,7 @@ global.party =
 		actions:[]
 	},
 	{
-		name: "Mudinho",
+		name: "Corvo",
 		hp: 100,
 		hpMax: 100,
 		mp: 200,
