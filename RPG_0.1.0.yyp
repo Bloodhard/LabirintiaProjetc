@@ -55,6 +55,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"64x64","folderPath":"folders/Sprites/Personagens/Movimentação/Zhara/64x64.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Set","folderPath":"folders/Tile Set.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Objetos/Menu.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"animal_pele_01.png","CopyToMask":-1,"filePath":"datafiles/texturas/128x128",},
@@ -849,6 +850,7 @@
     {"id":{"name":"gameData","path":"scripts/gameData/gameData.yy",},},
     {"id":{"name":"t_walls","path":"tilesets/t_walls/t_walls.yy",},},
     {"id":{"name":"sBox","path":"sprites/sBox/sBox.yy",},},
+    {"id":{"name":"scr_gui","path":"scripts/scr_gui/scr_gui.yy",},},
     {"id":{"name":"oPlayer_Mudinho","path":"objects/oPlayer_Mudinho/oPlayer_Mudinho.yy",},},
     {"id":{"name":"oPlayer_Knnovar","path":"objects/oPlayer_Knnovar/oPlayer_Knnovar.yy",},},
     {"id":{"name":"House","path":"tilesets/House/House.yy",},},
@@ -896,6 +898,7 @@
     {"id":{"name":"pSpriteMudinho_WalkRight64x64","path":"sprites/pSpriteMudinho_WalkRight64x64/pSpriteMudinho_WalkRight64x64.yy",},},
     {"id":{"name":"oPlayer_Zhara","path":"objects/oPlayer_Zhara/oPlayer_Zhara.yy",},},
     {"id":{"name":"sPointer","path":"sprites/sPointer/sPointer.yy",},},
+    {"id":{"name":"o_config","path":"objects/o_config/o_config.yy",},},
     {"id":{"name":"pSpriteGodhard_WalkLeft64x64","path":"sprites/pSpriteGodhard_WalkLeft64x64/pSpriteGodhard_WalkLeft64x64.yy",},},
     {"id":{"name":"s_floor_tile","path":"sprites/s_floor_tile/s_floor_tile.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
