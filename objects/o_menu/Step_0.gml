@@ -30,8 +30,7 @@ switch (menu_level){
 			room_goto_next(); 
 			break;
 		// Continuar Jogo
-		case 1:
-		break;
+		case 1: break;
 		// Configurações
 		case 2: 
 			menu_level = 1;

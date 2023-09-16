@@ -1,6 +1,6 @@
 opcoes[0][0] = "NOVO JOGO";
 opcoes[0][1] = "CARREGAR JOGO";
-opcoes[0][2] = "CONFIG";
+opcoes[0][2] = "CONFIGURAÇÕES";
 opcoes[0][3] = "SAIR";
 opcoes[1][0] = "LINGUAGEM: PORTUGUES";
 opcoes[1][1] = "EFEITO SONORO: LIGADO";
