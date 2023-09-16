@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Hito",
-    "path": "folders/Sprites/Personagens/Movimentação/Hito.yy",
+    "name": "64x64",
+    "path": "folders/Sprites/Personagens/Movimentação/Hito/64x64.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

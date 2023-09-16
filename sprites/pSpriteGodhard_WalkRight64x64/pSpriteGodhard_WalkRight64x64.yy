@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Godhard",
-    "path": "folders/Sprites/Personagens/Movimentação/Godhard.yy",
+    "name": "64x64",
+    "path": "folders/Sprites/Personagens/Movimentação/Godhard/64x64.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

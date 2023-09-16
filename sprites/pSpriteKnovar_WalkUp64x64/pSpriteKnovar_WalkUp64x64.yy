@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Knovar",
-    "path": "folders/Sprites/Personagens/Movimentação/Knovar.yy",
+    "name": "64x64",
+    "path": "folders/Sprites/Personagens/Movimentação/Knovar/64x64.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

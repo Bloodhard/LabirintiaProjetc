@@ -32,7 +32,7 @@
 5,6,7,5,6,7,1,2,14,15,-2147483648,-2147483648,0,9,10,11,2,3,9,10,11,9,10,11,9,10,11,9,10,11,9,10,11,9,10,11,
 9,10,11,9,10,11,5,6,2,3,-2147483648,-2147483648,0,13,14,15,6,7,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,
 13,14,15,13,14,15,9,10,6,7,-2147483648,-2147483648,-6,0,-24,-2147483648,6,13,14,10,11,-2147483648,-2147483648,-6,0,-24,-2147483648,4,1,2,14,15,-32,-2147483648,4,5,
-6,2,3,-32,-2147483648,4,9,10,6,7,-32,-2147483648,2,13,14,],"TileDataFormat":1,},"tilesetId":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+6,2,3,-32,-2147483648,4,9,10,6,7,-32,-2147483648,2,13,14,],"TileDataFormat":1,},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_1","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":26,"SerialiseWidth":36,"TileSerialiseData":[
 1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,
 5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,
@@ -60,7 +60,7 @@
 13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,13,14,15,
 1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,
 5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,5,6,7,
-],},"tilesetId":{"name":"rock1","path":"tilesets/rock1/rock1.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {

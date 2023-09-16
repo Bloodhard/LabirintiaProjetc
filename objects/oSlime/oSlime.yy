@@ -3,6 +3,7 @@
   "resourceVersion": "1.0",
   "name": "oSlime",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oPlayer_Godhard","path":"objects/oPlayer_Godhard/oPlayer_Godhard.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
@@ -28,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSlime",
-    "path": "sprites/sSlime/sSlime.yy",
+    "name": "sSlimeAttack",
+    "path": "sprites/sSlimeAttack/sSlimeAttack.yy",
   },
   "spriteMaskId": null,
   "visible": true,

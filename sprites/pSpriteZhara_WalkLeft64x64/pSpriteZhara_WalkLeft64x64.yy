@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Zhara",
-    "path": "folders/Sprites/Personagens/Movimentação/Zhara.yy",
+    "name": "64x64",
+    "path": "folders/Sprites/Personagens/Movimentação/Zhara/64x64.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

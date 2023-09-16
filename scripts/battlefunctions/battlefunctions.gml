@@ -1,5 +1,6 @@
 function NewEncounter(_enemies, _bg)
 {
+	camera_set_view_size(view_camera[0], 576, 412);
 	instance_create_depth
 	(
 	camera_get_view_x(view_camera [0]),
