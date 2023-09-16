@@ -67,14 +67,7 @@ for (var _y = 1; _y < height_-1; _y++) {
 			var _tile_index = NORTH*_north_tile + WEST*_west_tile + EAST*_east_tile + SOUTH*_south_tile + 1;
 			if (_tile_index == 1) {
 				grid_[# _x, _y] = FLOOR;
-			    // Calcule as coordenadas para o centro da célula
-				/*
-                var enemy_x = _x * CELL_WIDTH + CELL_WIDTH/2;
-                var enemy_y = _y * CELL_HEIGHT + CELL_HEIGHT/2;
-                
-                // Crie uma instância de inimigo no centro da célula de chão
-                instance_create_layer(enemy_x, enemy_y, "Instances", oSlime);
-				*/
+			
 			}
 		}
 	}
