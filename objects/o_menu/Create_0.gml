@@ -1,5 +1,3 @@
-camera_set_view_size(view_camera[0], 1366, 768);
-
 
 opcoes[0][0] = "NOVO JOGO";
 opcoes[0][1] = "CARREGAR JOGO";

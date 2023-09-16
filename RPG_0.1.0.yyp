@@ -56,6 +56,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Set","folderPath":"folders/Tile Set.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Objetos/Menu.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Texture","folderPath":"folders/Sprites/Texture.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"animal_pele_01.png","CopyToMask":-1,"filePath":"datafiles/texturas/128x128",},

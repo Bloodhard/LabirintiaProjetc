@@ -41,6 +41,7 @@
     {"name":"UI","order":17,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Set","order":13,"path":"folders/Tile Set.yy",},
     {"name":"Menu","order":9,"path":"folders/Objetos/Menu.yy",},
+    {"name":"Texture","order":18,"path":"folders/Sprites/Texture.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oSlime","order":4,"path":"objects/oSlime/oSlime.yy",},
