@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_wall_tiles",
-    "path": "sprites/s_wall_tiles/s_wall_tiles.yy",
+    "name": "CONCRETE_1A",
+    "path": "sprites/CONCRETE_1A/CONCRETE_1A.yy",
   },
   "spriteMaskId": null,
   "visible": false,
