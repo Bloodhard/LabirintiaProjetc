@@ -27,7 +27,7 @@ if (_x_input == 0 && _y_input == 0) {
 if (x_speed_ > 0) {
 	image_xscale = 1;	
 } else if (x_speed_ < 0) {
-	image_xscale = -1;	
+	image_xscale = 1;	
 }
 
 // Move horizontally

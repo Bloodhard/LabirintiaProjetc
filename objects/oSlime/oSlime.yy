@@ -30,9 +30,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sSlimeAttack",
-    "path": "sprites/sSlimeAttack/sSlimeAttack.yy",
+    "name": "sSlime14x14",
+    "path": "sprites/sSlime14x14/sSlime14x14.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sSlime14x14",
+    "path": "sprites/sSlime14x14/sSlime14x14.yy",
+  },
   "visible": true,
 }
