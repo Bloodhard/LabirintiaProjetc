@@ -874,6 +874,7 @@
     {"id":{"name":"pSpriteMudinho_WalkDown64x64","path":"sprites/pSpriteMudinho_WalkDown64x64/pSpriteMudinho_WalkDown64x64.yy",},},
     {"id":{"name":"BRICK_3A","path":"sprites/BRICK_3A/BRICK_3A.yy",},},
     {"id":{"name":"pSpriteGodhard_WalkDown64x64","path":"sprites/pSpriteGodhard_WalkDown64x64/pSpriteGodhard_WalkDown64x64.yy",},},
+    {"id":{"name":"sManuBackground","path":"sprites/sManuBackground/sManuBackground.yy",},},
     {"id":{"name":"oPlayer_Godhard_32x32","path":"objects/oPlayer_Godhard_32x32/oPlayer_Godhard_32x32.yy",},},
     {"id":{"name":"sSlimeAttack14x14","path":"sprites/sSlimeAttack14x14/sSlimeAttack14x14.yy",},},
     {"id":{"name":"pSpriteHito_WalkLeft64x64","path":"sprites/pSpriteHito_WalkLeft64x64/pSpriteHito_WalkLeft64x64.yy",},},
