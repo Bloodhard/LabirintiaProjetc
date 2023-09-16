@@ -844,6 +844,7 @@
     {"id":{"name":"sSlime","path":"sprites/sSlime/sSlime.yy",},},
     {"id":{"name":"pSpriteZhara_WalkDown64x64","path":"sprites/pSpriteZhara_WalkDown64x64/pSpriteZhara_WalkDown64x64.yy",},},
     {"id":{"name":"sTurnIndicator","path":"sprites/sTurnIndicator/sTurnIndicator.yy",},},
+    {"id":{"name":"r_menu","path":"rooms/r_menu/r_menu.yy",},},
     {"id":{"name":"oBattleUnitEnemy","path":"objects/oBattleUnitEnemy/oBattleUnitEnemy.yy",},},
     {"id":{"name":"gameData","path":"scripts/gameData/gameData.yy",},},
     {"id":{"name":"t_walls","path":"tilesets/t_walls/t_walls.yy",},},
@@ -885,6 +886,7 @@
     {"id":{"name":"sSlime14x14","path":"sprites/sSlime14x14/sSlime14x14.yy",},},
     {"id":{"name":"pSpriteHito_WalkUp64x64","path":"sprites/pSpriteHito_WalkUp64x64/pSpriteHito_WalkUp64x64.yy",},},
     {"id":{"name":"pSpriteZhara_WalkUp64x64","path":"sprites/pSpriteZhara_WalkUp64x64/pSpriteZhara_WalkUp64x64.yy",},},
+    {"id":{"name":"o_menu","path":"objects/o_menu/o_menu.yy",},},
     {"id":{"name":"s_shadow","path":"sprites/s_shadow/s_shadow.yy",},},
     {"id":{"name":"pSpriteMudinho_WalkUp64x64","path":"sprites/pSpriteMudinho_WalkUp64x64/pSpriteMudinho_WalkUp64x64.yy",},},
     {"id":{"name":"Sprite14","path":"sprites/Sprite14/Sprite14.yy",},},
@@ -909,6 +911,7 @@
     {"id":{"name":"Labirinto","path":"rooms/Labirinto/Labirinto.yy",},},
   ],
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_menu","path":"rooms/r_menu/r_menu.yy",},},
     {"roomId":{"name":"r_one","path":"rooms/r_one/r_one.yy",},},
     {"roomId":{"name":"Labirinto","path":"rooms/Labirinto/Labirinto.yy",},},
     {"roomId":{"name":"Caverna1","path":"rooms/Caverna1/Caverna1.yy",},},
