@@ -1,4 +1,4 @@
 target_x = 54;
 target_y = 36;
-target_rm = Caverna1;
+target_rm = r_one;
  
