@@ -1,6 +1,9 @@
+camera_set_view_size(view_camera[0], 1366, 768);
+
+
 opcoes[0][0] = "NOVO JOGO";
 opcoes[0][1] = "CARREGAR JOGO";
-opcoes[0][2] = "CONFIGURAÇÕES";
+opcoes[0][2] = "CONFIGURACOES";
 opcoes[0][3] = "SAIR";
 opcoes[1][0] = "LINGUAGEM: PORTUGUES";
 opcoes[1][1] = "EFEITO SONORO: LIGADO";
