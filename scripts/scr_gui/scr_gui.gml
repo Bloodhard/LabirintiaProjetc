@@ -13,7 +13,7 @@ function Cria_menu(_pega_larg_max,_get_alt_max, distancia, lista_arg)
 				}
 				else
 				{
-					draw_set_color(c_white);
+					draw_set_color(c_black);
 				}
 
 				draw_text(_pega_larg_max, _get_alt_max + (distancia * i), lista_arg[menu_level][i]);
