@@ -29,9 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sWarpBlock",
-    "path": "sprites/sWarpBlock/sWarpBlock.yy",
+    "name": "s_porta",
+    "path": "sprites/s_porta/s_porta.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

@@ -9,6 +9,8 @@ turn = 0;
 unitTurnOrder = [];
 unitRenderOrder = [];
 
+enemiesUnits = [global.enemies.slimeG];
+
 //fazer/ criar inimigos 
 function CriarInimigos(){
 	for (var i=0; i < array_length(enemies); i++)

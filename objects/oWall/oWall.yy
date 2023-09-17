@@ -30,5 +30,5 @@
     "path": "sprites/CONCRETE_1A/CONCRETE_1A.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
