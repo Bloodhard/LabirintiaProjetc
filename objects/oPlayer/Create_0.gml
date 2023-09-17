@@ -1,3 +1,5 @@
+depth = -y * 2;
+
 x_speed_ = 0;
 y_speed_ = 0;
 max_speed_ = 2;
