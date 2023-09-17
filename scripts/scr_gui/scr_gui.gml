@@ -9,7 +9,7 @@ function Cria_menu(_pega_larg_max,_get_alt_max, distancia, lista_arg)
 	
 				if(index = i)
 				{
-					draw_set_color(c_yellow);
+					draw_set_color(c_white);
 				}
 				else
 				{
