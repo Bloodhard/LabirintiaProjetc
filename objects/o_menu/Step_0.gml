@@ -30,7 +30,15 @@ switch (menu_level){
 			room_goto_next(); 
 			break;
 		// Continuar Jogo
-		case 1: break;
+		case 1: 
+			if(file_exists("save.sav")){
+				ini_open("save.sav");
+				room_goto(r_one);
+				oPlayer.x = ini_read_real("Jogador", "x_atual", 0);
+				oPlayer.y = ini_read_real("Jogador", "y_atual", 0);
+				ini_close();
+			}
+		break;
 		// Configurações
 		case 2: 
 			menu_level = 1;
