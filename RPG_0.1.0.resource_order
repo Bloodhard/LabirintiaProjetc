@@ -123,6 +123,7 @@
     {"name":"oCamera","order":3,"path":"objects/oCamera/oCamera.yy",},
     {"name":"BRICK_3E","order":9,"path":"sprites/BRICK_3E/BRICK_3E.yy",},
     {"name":"BRICK_4E","order":14,"path":"sprites/BRICK_4E/BRICK_4E.yy",},
+    {"name":"oBattleEffect","order":6,"path":"objects/oBattleEffect/oBattleEffect.yy",},
     {"name":"oWarpBlock","order":2,"path":"objects/oWarpBlock/oWarpBlock.yy",},
     {"name":"BRICK_3D","order":8,"path":"sprites/BRICK_3D/BRICK_3D.yy",},
     {"name":"map_macro","order":4,"path":"scripts/map_macro/map_macro.yy",},

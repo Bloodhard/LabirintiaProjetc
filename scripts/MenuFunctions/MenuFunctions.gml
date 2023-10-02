@@ -61,3 +61,47 @@ function MenuGoBack()
 	options = optionsAbove[subMenuLevel];
 	hover = 0;
 }
+
+function MenuSelectAction(_user, _action)
+{
+	with (obj_menu) active = false;
+	
+	//Activate the targetting cursor if needed, or simply begin the action
+	with (oBattle) 
+	{
+		if(_action.targetRequired)
+		{
+			with (cursor)
+			{
+				active = true;
+				activeAction = _action;
+				targetAll = _action.targetAll;
+				if (targetAll == MODE.VARIES) targetAll = true; // "toggle"
+				activeUser = _user;
+				
+				if (_action.targetEnemyByDefault) //target enemy by default
+				{
+					targetIndex = 0;
+					targetSide = oBattle.enemiesUnits
+					activeTarget = oBattle.enemiesUnits[targetIndex];
+				}
+				else
+				{
+					targetSide = oBattle.partyUnits;
+					activeTarget = activeUser;
+					var _findSelf = function (_element)
+					{
+						return (_element == activeTarget)
+					}
+					targetIndex = array_find_index(oBattle.partyUnits, _findSelf);
+				}
+			}
+		}
+		else
+		{
+			//If no target needed, begin the action and end the menu
+			BeginAction(_user,_action,01);
+			with(obj_menu) instance_destroy();
+		}
+	}
+}

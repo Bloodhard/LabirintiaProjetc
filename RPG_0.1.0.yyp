@@ -937,6 +937,7 @@
     {"id":{"name":"BRICK_3E","path":"sprites/BRICK_3E/BRICK_3E.yy",},},
     {"id":{"name":"pSpriteHito_WalkDown64x64","path":"sprites/pSpriteHito_WalkDown64x64/pSpriteHito_WalkDown64x64.yy",},},
     {"id":{"name":"BRICK_4E","path":"sprites/BRICK_4E/BRICK_4E.yy",},},
+    {"id":{"name":"oBattleEffect","path":"objects/oBattleEffect/oBattleEffect.yy",},},
     {"id":{"name":"oWarpBlock","path":"objects/oWarpBlock/oWarpBlock.yy",},},
     {"id":{"name":"BRICK_3D","path":"sprites/BRICK_3D/BRICK_3D.yy",},},
     {"id":{"name":"oBattle","path":"objects/oBattle/oBattle.yy",},},

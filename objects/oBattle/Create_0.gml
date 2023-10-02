@@ -11,11 +11,21 @@ unitRenderOrder = [];
 
 turnCount = 0;
 roundCount = 0;
-battleWaitTimeFrames = 30;
-battleWaitTimeRemaining = 5;
-currentUser = noone;
-currentAction = -1;
-currentTargets = noone;
+battleWaitTimeFrames = 60;
+battleWaitTimeRemaining = 0;
+
+//Make targetting cursor
+cursor =
+{
+	currentUser : noone,
+	currentAction : -1,
+	currentTargets : noone,
+	targetside: -1,
+	targetIndex: 0,
+	targetAll: false,
+	confirmDelay: 0,
+	active: false
+};
 
 
 enemiesUnits = [global.enemies.slimeG];
@@ -59,35 +69,76 @@ function OrdemDeRenderizacao (){
 
 function BattleStateSelectAction()
 {
-	// Get Current Unit
-	var _unit = unitTurnOrder[turn];
-	
-	//Is the unit dead or unable to act?
-	if (!instance_exists(_unit)) || (_unit.hp <= 0)
+	if (!instance_exists(obj_menu))
 	{
-		var battleState = BattleStateVictoryCheck;
-		exit;
-	}
+		// Get Current Unit
+		var _unit = unitTurnOrder[turn];
 	
-	//Select an action to perform
-	//BeginAction(_unit.id, global.actionLibrary.attack, _unit.id);
+		//Is the unit dead or unable to act?
+		if (!instance_exists(_unit)) || (_unit.hp <= 0)
+		{
+			var battleState = BattleStateVictoryCheck;
+			exit;
+		}
 	
-	// if unit is player controlled:
-	if (_unit.object_index == oBattleUnitPC)
-	{
-			var _action = global.actionLibrary.attack;
-			var _possibleTargets = array_filter(oBattle.enemiesUnits, function(_unit,_index)
+		//Select an action to perform
+		//BeginAction(_unit.id, global.actionLibrary.attack, _unit.id);
+	
+		// if unit is player controlled:
+		if (_unit.object_index == oBattleUnitPC)
+		{
+			//Compile the action menu
+			var _menuOptions = [];
+			var _subMenus = {};
+			
+			var _actionList = _unit.actions;
+			
+			for (var i = 0; i < array_length(_actionList); i++)
 			{
-				return (_unit.hp > 0);
-			});
-			var _target = _possibleTargets[irandom(array_length(_possibleTargets)-1)];
-			BeginAction(_unit.id, _action, _target);
-	}
-	else
-	{
-		//if unit is AI controlled:
-		var _enemyAction = _unit.AIscript();
-		if(_enemyAction != -1) BeginAction(_unit.id, _enemyAction[0], _enemyAction[1]);
+				var _action = _actionList[i];
+				var _available = true; // Later we'll check mp cost here
+				var _nameAndCount = _action.name; // Later we'll modify the name to include the item count, if the action is an item.
+				if (_action.subMenu == -1)
+				{
+					array_push(_menuOptions, [_nameAndCount, MenuSelectAction, [_unit, _action], _available]);
+				}
+				else
+				{
+					// create or add to a submenu
+					if (is_undefined(_subMenus[$ _action.subMenu]))
+					{
+						variable_struct_set(_subMenus, _action.subMenu, [[_nameAndCount, MenuSelectAction, [_unit, _action], _available]]);
+					}
+					else
+					{
+						array_push(_subMenus[$ _action.subMenu], [_nameAndCount, MenuSelectAction, [_unit, _action], _available]);
+					}
+				}
+				
+				
+				}
+				//turn sub menus into an array
+				var _subMenusArray = variable_struct_get_names(_subMenus);
+				for (var i = 0; i < array_length(_subMenusArray); i++)
+				{
+					//sort submenu if needed
+					//(here)
+					
+					//add back option at the end of each submenu
+					array_push(_subMenus[$ _subMenusArray[i]], ["Back", MenuGoBack, -1, true]);
+					// add submenu into main menu
+					array_push(_menuOptions, [_subMenusArray[i], SubMenu, [_subMenus[$ _subMenusArray[i]]], true]);
+			}
+
+			Menu(x+10, y+110, _menuOptions, , 74, 60);
+				
+		}
+		else
+		{
+			//if unit is AI controlled:
+			var _enemyAction = _unit.AIscript();
+			if(_enemyAction != -1) BeginAction(_unit.id, _enemyAction[0], _enemyAction[1]);
+		}
 	}
 }
 
@@ -126,18 +177,35 @@ function BattleStatePerfomAction()
 				image_index = 0;
 				acting = false;
 			}
-				
-		
+		}
+		if (variable_struct_exists(currentAction, "effectSprite"))
+		{
+			if (currentAction.effectOnTarget == MODE.ALWAYS) || ( (currentAction.effectOnTarget == MODE.VARIES) && (array_length(currentTargets) <= 1) )
+			{
+				for (var i = 0; i < array_length(currentTargets); i++)
+				{
+					instance_create_depth(currentTargets[i].x,currentTargets[i].y, currentTargets[i].depth-1, oBattleEffect,{sprite_index: currentAction.effectSprite});
+				}
+			}
+			else //play it at 0,0
+			{
+				var _effectSprite = currentAction._effectSprite
+				if (variable_struct_exists(currentAction, "effectSpriteNoTarget")) _effectSprite = currentAction.effectSpriteNoTarget;
+				instance_create_depth(x,y,depth-100,oBattleEffect,{sprite_index : _effectSprite});
+			}
 		}
 		currentAction.func(currentUser, currentTargets);
 			
 	}
 	else //wait for delay and then end the turn
 	{
-		battleWaitTimeRemaining--
-		if(battleWaitTimeRemaining == 0)
+		if (!instance_exists(oBattleEffect))
 		{
-			battleState = BattleStateVictoryCheck;
+			battleWaitTimeRemaining--
+			if(battleWaitTimeRemaining == 0)
+			{
+				battleState = BattleStateVictoryCheck;
+			}
 		}
 	}
 }
