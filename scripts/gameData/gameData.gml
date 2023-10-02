@@ -116,8 +116,8 @@ global.enemies = {
 	{
 		name: "Slime",
 		classe: "Monster",
-		hp: 100000,
-		hpMax: 100000,
+		hp: 30,
+		hpMax: 30,
 		mp: 0,
 		mpMax: 0,
 		strength: 5,

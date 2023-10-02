@@ -11,7 +11,7 @@ unitRenderOrder = [];
 
 turnCount = 0;
 roundCount = 0;
-battleWaitTimeFrames = 0;
+battleWaitTimeFrames = 30;
 battleWaitTimeRemaining = 0;
 
 //Make targetting cursor
