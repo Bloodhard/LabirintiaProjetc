@@ -40,7 +40,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Object Colission","folderPath":"folders/Sprites/Object Colission.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Personagens","folderPath":"folders/Sprites/Personagens.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Movimentação","folderPath":"folders/Sprites/Personagens/Movimentação.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Combate","folderPath":"folders/Sprites/Personagens/Movimentação/Combate.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Corvo","folderPath":"folders/Sprites/Personagens/Movimentação/Corvo.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Godhard","folderPath":"folders/Sprites/Personagens/Movimentação/Godhard.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"32x32","folderPath":"folders/Sprites/Personagens/Movimentação/Godhard/32x32.yy",},
@@ -57,6 +56,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Texture","folderPath":"folders/Sprites/Texture.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Set","folderPath":"folders/Tile Set.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Combate","folderPath":"folders/Sprites/Personagens/Combate.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"animal_pele_01.png","CopyToMask":-1,"filePath":"datafiles/texturas/128x128",},

@@ -26,7 +26,6 @@
     {"name":"Object Colission","order":8,"path":"folders/Sprites/Object Colission.yy",},
     {"name":"Personagens","order":7,"path":"folders/Sprites/Personagens.yy",},
     {"name":"Movimentação","order":5,"path":"folders/Sprites/Personagens/Movimentação.yy",},
-    {"name":"Combate","order":5,"path":"folders/Sprites/Personagens/Movimentação/Combate.yy",},
     {"name":"Corvo","order":3,"path":"folders/Sprites/Personagens/Movimentação/Corvo.yy",},
     {"name":"32x32","order":1,"path":"folders/Sprites/Personagens/Movimentação/Godhard/32x32.yy",},
     {"name":"64x64","order":2,"path":"folders/Sprites/Personagens/Movimentação/Godhard/64x64.yy",},
@@ -42,6 +41,7 @@
     {"name":"Texture","order":18,"path":"folders/Sprites/Texture.yy",},
     {"name":"UI","order":17,"path":"folders/Sprites/UI.yy",},
     {"name":"Tile Set","order":13,"path":"folders/Tile Set.yy",},
+    {"name":"Combate","order":6,"path":"folders/Sprites/Personagens/Combate.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"oSlime","order":4,"path":"objects/oSlime/oSlime.yy",},
