@@ -11,7 +11,7 @@ unitRenderOrder = [];
 
 turnCount = 0;
 roundCount = 0;
-battleWaitTimeFrames = 60;
+battleWaitTimeFrames = 0;
 battleWaitTimeRemaining = 0;
 
 //Make targetting cursor
@@ -152,6 +152,7 @@ function BeginAction(_user, _action, _targets)
 	with(_user)
 	{
 		acting = true;
+		// play user animation if it is defined for that action, and that user
 		if(!is_undefined(_action[$ "userAnimation"])) && (!is_undefined(_user.sprites[$ _action.userAnimation]))
 		{
 			sprite_index = sprites[$ _action.userAnimation];
@@ -177,7 +178,8 @@ function BattleStatePerfomAction()
 				image_index = 0;
 				acting = false;
 			}
-		}
+		
+
 		if (variable_struct_exists(currentAction, "effectSprite"))
 		{
 			if (currentAction.effectOnTarget == MODE.ALWAYS) || ( (currentAction.effectOnTarget == MODE.VARIES) && (array_length(currentTargets) <= 1) )
@@ -189,13 +191,15 @@ function BattleStatePerfomAction()
 			}
 			else //play it at 0,0
 			{
-				var _effectSprite = currentAction._effectSprite
+				var _effectSprite = currentAction.effectSprite
 				if (variable_struct_exists(currentAction, "effectSpriteNoTarget")) _effectSprite = currentAction.effectSpriteNoTarget;
 				instance_create_depth(x,y,depth-100,oBattleEffect,{sprite_index : _effectSprite});
 			}
 		}
 		currentAction.func(currentUser, currentTargets);
+		
 			
+	}
 	}
 	else //wait for delay and then end the turn
 	{

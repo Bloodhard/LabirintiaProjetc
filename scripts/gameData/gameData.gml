@@ -10,7 +10,7 @@ global.actionLibrary =
 		targetAll: MODE.NEVER,
 		userAnimation : "attack",
 		effectSprite: noone,
-		effectOnTarget : MODE.ALWAYS,
+		effectOnTarget : MODE.NEVER,
 		func: function(_user, _targets)
 		{
 			var _damage = ceil(_user.strength + random_range(-_user.strength * 0.25, _user.strength * 0.25));
@@ -25,10 +25,10 @@ global.actionLibrary =
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
-		targetAll: MODE.NEVER,
+		targetAll: MODE.ALWAYS,
 		userAnimation: "cast",
 		effectSprite: noone,
-		effectOnTarget : MODE.ALWAYS,
+		effectOnTarget : MODE.NEVER,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -57,7 +57,7 @@ global.party =
 		mpMax: 200,
 		strength: 10,
 		inteligence: 20,
-		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkRight64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64},
+		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
 	},
 	{
@@ -69,7 +69,7 @@ global.party =
 		mpMax: 200,
 		strength: 10,
 		inteligence: 20,
-		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_WalkRight64x64, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
+		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_WalkDown64x64, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
 	},
 	{
@@ -81,7 +81,7 @@ global.party =
 		mpMax: 200,
 		strength: 10,
 		inteligence: 20,
-		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_WalkRight64x64, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
+		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_WalkDown64x64, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
 	},
 	{
@@ -93,7 +93,7 @@ global.party =
 		mpMax: 200,
 		strength: 10,
 		inteligence: 20,
-		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkRight64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64},
+		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
 	},
 	{
@@ -105,7 +105,7 @@ global.party =
 		mpMax: 200,
 		strength: 10,
 		inteligence: 20,
-		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkRight64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64},
+		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
 	},
 ]
@@ -116,8 +116,8 @@ global.enemies = {
 	{
 		name: "Slime",
 		classe: "Monster",
-		hp: 30,
-		hpMax: 30,
+		hp: 100000,
+		hpMax: 100000,
 		mp: 0,
 		mpMax: 0,
 		strength: 5,
