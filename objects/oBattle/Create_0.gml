@@ -8,24 +8,28 @@ units = [];
 turn = 0;
 unitTurnOrder = [];
 unitRenderOrder = [];
-
 turnCount = 0;
 roundCount = 0;
+battleText = "";
 battleWaitTimeFrames = 30;
 battleWaitTimeRemaining = 0;
+currentUser = noone;
+currentAction = -1;
+currentTargets = noone;
 
 //Make targetting cursor
 cursor =
 {
 	currentUser : noone,
 	currentAction : -1,
-	currentTargets : noone,
+	currentTarget : noone,
 	targetside: -1,
 	targetIndex: 0,
 	targetAll: false,
 	confirmDelay: 0,
 	active: false
 };
+
 
 
 enemiesUnits = [global.enemies.slimeG];
@@ -147,6 +151,7 @@ function BeginAction(_user, _action, _targets)
 	currentUser = _user;
 	currentAction = _action;
 	currentTargets = _targets;
+	battleText = string_ext(_action.description, [_user.name]);
 	if(!is_array(currentTargets)) currentTargets = [currentTargets];
 	battleWaitTimeRemaining = battleWaitTimeFrames;
 	with(_user)
@@ -221,6 +226,7 @@ function BattleStateVictoryCheck()
 
 function BattleStateTurnProgression()
 {
+	battleText = "";
 	turnCount++;
 	turn++;
 	//Loop turns

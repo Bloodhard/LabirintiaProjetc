@@ -92,6 +92,15 @@ function DesenharNomesAliados(){
 	}
 }
 
+
+
+DesenharFundoBG();
+DesenharUnidadeDepthOrder();
+DesenharUIBOX();
+DesenharHeadings();
+DesenharNomesInimigos();
+DesenharNomesAliados();
+
 //Draw target cursor
 if (cursor.active)
 {
@@ -116,9 +125,13 @@ if (cursor.active)
 	}
 }
 
-DesenharFundoBG();
-DesenharUnidadeDepthOrder();
-DesenharUIBOX();
-DesenharHeadings();
-DesenharNomesInimigos();
-DesenharNomesAliados();
+//Draw Battle Text
+
+if (battleText != "")
+{
+	var _w = string_width(battleText)+20;
+	draw_sprite_stretched(sBox, 0, x+160-(_w*0.5),y+5,_w,25);
+	draw_set_halign(fa_center);
+	draw_set_color(c_white);
+	draw_text(x+160, y+10, battleText);
+}

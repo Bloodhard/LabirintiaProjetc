@@ -25,7 +25,7 @@ global.actionLibrary =
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
-		targetAll: MODE.ALWAYS,
+		targetAll: MODE.VARIES,
 		userAnimation: "cast",
 		effectSprite: noone,
 		effectOnTarget : MODE.NEVER,
