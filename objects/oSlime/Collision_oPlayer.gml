@@ -1,3 +1,4 @@
+instance_destroy();
 var qinimigos = irandom_range(1,4);//aleatorio de 1 a 4 
 
 //iniciar instancia de inimigos 1 a 4
@@ -10,3 +11,4 @@ if (qinimigos == 1){
 }else if (qinimigos == 4){
 	NewEncounter([global.enemies.slimeG, global.enemies.slimeG, global.enemies.slimeG, global.enemies.slimeG] , sBgField);
 }
+

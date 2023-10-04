@@ -1,6 +1,6 @@
 var _x_input = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _y_input = keyboard_check(vk_down) - keyboard_check(vk_up);
-
+  
 x_speed_ += _x_input * acceleration_;
 y_speed_ += _y_input * acceleration_;
 var _speed = point_distance(0, 0, x_speed_, y_speed_);
