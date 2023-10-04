@@ -78,9 +78,12 @@ function BattleStateSelectAction()
 		// Get Current Unit
 		var _unit = unitTurnOrder[turn];
 	
-		//Is the unit dead or unable to act?
+		//As unidades estão mortas ou incapazes de agir?
 		if (!instance_exists(_unit)) || (_unit.hp <= 0)
 		{
+
+			battleState = BattleStateVictoryCheck;
+
 			//pode ser feito removendo o item do Array
 			//array_delete(unitTurnOrder, turn, 1);
 			//ou
@@ -142,7 +145,7 @@ function BattleStateSelectAction()
 		}
 		else
 		{
-			//if unit is AI controlled:
+			//Unidade sendo controlada por IA:
 			var _enemyAction = _unit.AIscript();
 			if(_enemyAction != -1) BeginAction(_unit.id, _enemyAction[0], _enemyAction[1]);
 		}

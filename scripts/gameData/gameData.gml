@@ -2,14 +2,14 @@ global.actionLibrary =
 {
 	attack:
 	{
-		name: "Attack",
-		description: "{0} Attacks!",
+		name: "Ataque",
+		description: "{0} Ataca!",
 		subMenu: -1,
 		targetRequired: true,
 		targetEnemyByDefault: true,
 		targetAll: MODE.NEVER,
 		userAnimation : "attack",
-		effectSprite: noone,
+		effectSprite: sAttackBonk,
 		effectOnTarget : MODE.NEVER,
 		func: function(_user, _targets)
 		{
@@ -19,8 +19,8 @@ global.actionLibrary =
 	},
 	ice :
 	{
-		name: "Ice",
-		description : "{0} casts Ice!",
+		name: "Gelo",
+		description : "{0} conjura Gelo!",
 		subMenu: "Magic",
 		mpCost: 4,
 		targetRequired: true,
@@ -35,7 +35,127 @@ global.actionLibrary =
 			BattleChangeHP(_targets[0], -_damage);
 			//BattleChangeMP(_user, -mpCost)
 		}
-	}
+	},
+	fire :
+	{
+		name: "Fogo",
+		description : "{0} ataca com Fogo!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.VARIES,
+		userAnimation: "cast",
+		effectSprite: sAttackFire,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	divineSlash :
+	{
+		name: "Corte Divino",
+		description : "{0} Purifica os impuros!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
+		effectSprite: noone,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.strength + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	darkBall :
+	{
+		name: "Esfera Nula",
+		description : "{0} Convoca o vazio!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.VARIES,
+		userAnimation: "cast",
+		effectSprite: noone,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	surprise :
+	{
+		name: "Golpe Surpresa",
+		description : "{0} Mira no distraido!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
+		effectSprite: noone,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.strength + random_range(-_user.strength * 0.25, _user.strength * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	hollyA :
+	{
+		name: "Luz Sagrada",
+		description : "{0} Traz retribuicao divina!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.VARIES,
+		userAnimation: "cast",
+		effectSprite: noone,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	heal :
+	{
+		name: "Cura",
+		description : "{0} Renova o espirito dos caidos!",
+		subMenu: "Magic",
+		mpCost: 4,
+		targetRequired: true,
+		targetEnemyByDefault: false, //0: party/self, 1: enemy
+		targetAll: MODE.VARIES,
+		userAnimation: "cast",
+		effectSprite: sAttackHeal,
+		effectOnTarget : MODE.NEVER,
+		func : function(_user, _targets)
+		{
+			var _heal = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
+			BattleChangeHP(_targets[0], +_heal);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	
+	
 }
 
 enum MODE
@@ -55,10 +175,10 @@ global.party =
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
-		strength: 10,
-		inteligence: 20,
-		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
+		strength: 2,
+		inteligence: 30,
+		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64, cast: pSpriteGodhard_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.hollyA, global.actionLibrary.heal]
 	},
 	{
 		name: "Knovar",
@@ -67,10 +187,10 @@ global.party =
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
-		strength: 10,
-		inteligence: 20,
-		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_WalkDown64x64, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
+		strength: 25,
+		inteligence: 10,
+		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_Attack, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
+		actions:[global.actionLibrary.attack, global.actionLibrary.surprise]
 	},
 	{
 		name: "Zhara",
@@ -79,10 +199,10 @@ global.party =
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
-		strength: 10,
-		inteligence: 20,
-		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_WalkDown64x64, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
+		strength: 30,
+		inteligence: 10,
+		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_Attack, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
+		actions:[global.actionLibrary.attack, global.actionLibrary.divineSlash]
 	},
 	{
 		name: "Hito",
@@ -91,10 +211,10 @@ global.party =
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
-		strength: 10,
+		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
+		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64, cast: pSpriteHito_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.ice, global.actionLibrary.fire]
 	},
 	{
 		name: "Corvo",
@@ -103,10 +223,10 @@ global.party =
 		hpMax: 100,
 		mp: 200,
 		mpMax: 200,
-		strength: 10,
+		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice]
+		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64, cast: pSpriteMudinho_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.darkBall]
 	},
 ]
 
@@ -116,8 +236,8 @@ global.enemies = {
 	{
 		name: "Slime",
 		classe: "Monster",
-		hp: 30,
-		hpMax: 30,
+		hp: 2000,
+		hpMax: 2000,
 		mp: 0,
 		mpMax: 0,
 		strength: 5,
@@ -126,7 +246,7 @@ global.enemies = {
 		xpValue : 15,
 		AIscript : function()
 		{
-			//attack random party member
+			//Ataca um membro da equipe do jogador
 			var _action = actions [0];
 			var _possibleTargets = array_filter(oBattle.partyUnits, function(_unit,_index)
 			{
