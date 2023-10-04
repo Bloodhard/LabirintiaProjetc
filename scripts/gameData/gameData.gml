@@ -10,7 +10,7 @@ global.actionLibrary =
 		targetAll: MODE.NEVER,
 		userAnimation : "attack",
 		effectSprite: sAttackBonk,
-		effectOnTarget : MODE.NEVER,
+		effectOnTarget : MODE.ALWAYS,
 		func: function(_user, _targets)
 		{
 			var _damage = ceil(_user.strength + random_range(-_user.strength * 0.25, _user.strength * 0.25));
@@ -27,8 +27,8 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: noone,
-		effectOnTarget : MODE.NEVER,
+		effectSprite: sAttackIce,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -47,7 +47,7 @@ global.actionLibrary =
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
 		effectSprite: sAttackFire,
-		effectOnTarget : MODE.NEVER,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -65,8 +65,8 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.NEVER,
 		userAnimation: "attack",
-		effectSprite: noone,
-		effectOnTarget : MODE.NEVER,
+		effectSprite: sAttackDVSlash,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.strength + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -84,8 +84,8 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: noone,
-		effectOnTarget : MODE.NEVER,
+		effectSprite: sAttackVoid,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -104,8 +104,8 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.NEVER,
 		userAnimation: "attack",
-		effectSprite: noone,
-		effectOnTarget : MODE.NEVER,
+		effectSprite: sAttackKnnovar,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _damage = ceil(_user.strength + random_range(-_user.strength * 0.25, _user.strength * 0.25));
@@ -144,8 +144,8 @@ global.actionLibrary =
 		targetEnemyByDefault: false, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: sAttackHeal,
-		effectOnTarget : MODE.NEVER,
+		effectSprite: sHealGround,
+		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
 			var _heal = ceil(_user.inteligence + random_range(-_user.inteligence * 0.25, _user.inteligence * 0.25));
@@ -236,8 +236,8 @@ global.enemies = {
 	{
 		name: "Slime",
 		classe: "Monster",
-		hp: 2000,
-		hpMax: 2000,
+		hp: 20,
+		hpMax: 20,
 		mp: 0,
 		mpMax: 0,
 		strength: 5,

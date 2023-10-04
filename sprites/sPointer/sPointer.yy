@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "sPointer",
-  "bbox_bottom": 25,
+  "bbox_bottom": 26,
   "bbox_left": 1,
   "bbox_right": 18,
   "bbox_top": 10,
