@@ -9,7 +9,7 @@ global.actionLibrary =
 		targetEnemyByDefault: true,
 		targetAll: MODE.NEVER,
 		userAnimation : "attack",
-		effectSprite: noone,
+		effectSprite: sAttackBonk,
 		effectOnTarget : MODE.NEVER,
 		func: function(_user, _targets)
 		{
@@ -46,7 +46,7 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: noone,
+		effectSprite: sAttackFire,
 		effectOnTarget : MODE.NEVER,
 		func : function(_user, _targets)
 		{
@@ -63,8 +63,8 @@ global.actionLibrary =
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
-		targetAll: MODE.VARIES,
-		userAnimation: "cast",
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
 		effectSprite: noone,
 		effectOnTarget : MODE.NEVER,
 		func : function(_user, _targets)
@@ -102,8 +102,8 @@ global.actionLibrary =
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
-		targetAll: MODE.VARIES,
-		userAnimation: "cast",
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
 		effectSprite: noone,
 		effectOnTarget : MODE.NEVER,
 		func : function(_user, _targets)
@@ -144,7 +144,7 @@ global.actionLibrary =
 		targetEnemyByDefault: false, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: noone,
+		effectSprite: sAttackHeal,
 		effectOnTarget : MODE.NEVER,
 		func : function(_user, _targets)
 		{
@@ -177,7 +177,7 @@ global.party =
 		mpMax: 200,
 		strength: 2,
 		inteligence: 30,
-		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64},
+		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64, cast: pSpriteGodhard_Cast},
 		actions:[global.actionLibrary.attack, global.actionLibrary.hollyA, global.actionLibrary.heal]
 	},
 	{
@@ -189,7 +189,7 @@ global.party =
 		mpMax: 200,
 		strength: 25,
 		inteligence: 10,
-		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_WalkDown64x64, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
+		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_Attack, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.surprise]
 	},
 	{
@@ -201,7 +201,7 @@ global.party =
 		mpMax: 200,
 		strength: 30,
 		inteligence: 10,
-		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_WalkDown64x64, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
+		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_Attack, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
 		actions:[global.actionLibrary.attack, global.actionLibrary.divineSlash]
 	},
 	{
@@ -213,7 +213,7 @@ global.party =
 		mpMax: 200,
 		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64},
+		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64, cast: pSpriteHito_Cast},
 		actions:[global.actionLibrary.attack, global.actionLibrary.ice, global.actionLibrary.fire]
 	},
 	{
@@ -225,7 +225,7 @@ global.party =
 		mpMax: 200,
 		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64},
+		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64, cast: pSpriteMudinho_Cast},
 		actions:[global.actionLibrary.attack, global.actionLibrary.darkBall]
 	},
 ]
@@ -236,8 +236,8 @@ global.enemies = {
 	{
 		name: "Slime",
 		classe: "Monster",
-		hp: 30,
-		hpMax: 30,
+		hp: 2000,
+		hpMax: 2000,
 		mp: 0,
 		mpMax: 0,
 		strength: 5,
@@ -246,7 +246,7 @@ global.enemies = {
 		xpValue : 15,
 		AIscript : function()
 		{
-			//attack random party member
+			//Ataca um membro da equipe do jogador
 			var _action = actions [0];
 			var _possibleTargets = array_filter(oBattle.partyUnits, function(_unit,_index)
 			{

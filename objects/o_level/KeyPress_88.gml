@@ -16,8 +16,6 @@ with (o_level)
 		obj_persistent : object_get_persistent(object_index),
 		y: y,
 		x: x,
-		spd: spd,
-		image_index,
 		room: room
 	}
 	
