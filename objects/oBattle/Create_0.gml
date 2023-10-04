@@ -81,7 +81,10 @@ function BattleStateSelectAction()
 		//Is the unit dead or unable to act?
 		if (!instance_exists(_unit)) || (_unit.hp <= 0)
 		{
-			var battleState = BattleStateVictoryCheck;
+			//pode ser feito removendo o item do Array
+			//array_delete(unitTurnOrder, turn, 1);
+			//ou
+		    battleState = BattleStateVictoryCheck;
 			exit;
 		}
 	
@@ -229,11 +232,35 @@ function BattleStateTurnProgression()
 	battleText = "";
 	turnCount++;
 	turn++;
+	
+	var contadorInimigosDerrotados = 0;
+	// Verificar todos os inimigos na array enemiesUnits
+	for (var i = 0; i < array_length(enemiesUnits); i++) 
+	{
+		 var inimigo = enemiesUnits[i];
+		 
+		 if (inimigo.hp <= 0) 
+		 {
+		 // Inimigo derrotado, aumentar o contador
+		 contadorInimigosDerrotados++;
+		 }
+	}
+	
+	// Verificar se todos os inimigos estão derrotados
+	if (contadorInimigosDerrotados == array_length(enemiesUnits)){
+		 instance_deactivate_all(true);
+		 instance_destroy();
+		 instance_activate_all();
+		 display_set_gui_size(320,180);
+	}
+	
 	//Loop turns
 	if (turn > array_length(unitTurnOrder) - 1)
 	{
 		turn = 0;
-		roundCount++;
+	    roundCount++;
+		var contadorInimigosDerrotados = 0;
+
 	}
 	battleState = BattleStateSelectAction;
 }
