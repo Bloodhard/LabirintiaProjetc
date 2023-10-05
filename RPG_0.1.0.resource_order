@@ -65,6 +65,7 @@
     {"name":"BRICK_4A","order":10,"path":"sprites/BRICK_4A/BRICK_4A.yy",},
     {"name":"oBattleFloatingText","order":4,"path":"objects/oBattleFloatingText/oBattleFloatingText.yy",},
     {"name":"CONCRETE_1A","order":15,"path":"sprites/CONCRETE_1A/CONCRETE_1A.yy",},
+    {"name":"sFireDrop","order":11,"path":"sprites/sFireDrop/sFireDrop.yy",},
     {"name":"House","order":2,"path":"tilesets/House/House.yy",},
     {"name":"grid_place_meeting","order":5,"path":"scripts/grid_place_meeting/grid_place_meeting.yy",},
     {"name":"BRICK_4B","order":11,"path":"sprites/BRICK_4B/BRICK_4B.yy",},

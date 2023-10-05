@@ -865,6 +865,7 @@
     {"id":{"name":"BRICK_4A","path":"sprites/BRICK_4A/BRICK_4A.yy",},},
     {"id":{"name":"oBattleFloatingText","path":"objects/oBattleFloatingText/oBattleFloatingText.yy",},},
     {"id":{"name":"CONCRETE_1A","path":"sprites/CONCRETE_1A/CONCRETE_1A.yy",},},
+    {"id":{"name":"sFireDrop","path":"sprites/sFireDrop/sFireDrop.yy",},},
     {"id":{"name":"House","path":"tilesets/House/House.yy",},},
     {"id":{"name":"grid_place_meeting","path":"scripts/grid_place_meeting/grid_place_meeting.yy",},},
     {"id":{"name":"BRICK_4B","path":"sprites/BRICK_4B/BRICK_4B.yy",},},

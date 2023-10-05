@@ -46,7 +46,7 @@ global.actionLibrary =
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
 		targetAll: MODE.VARIES,
 		userAnimation: "cast",
-		effectSprite: sAttackFire,
+		effectSprite: sFireDrop,
 		effectOnTarget : MODE.ALWAYS,
 		func : function(_user, _targets)
 		{
