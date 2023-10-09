@@ -35,8 +35,8 @@ function DesenharHeadings(){
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	draw_set_color(c_grey);
-	draw_text(x+COLUMN_ENEMY,y+320,"ENEMY");
-	draw_text(x+COLUMN_NAME,y+320,"NAME");
+	draw_text(x+COLUMN_ENEMY,y+320,"INIMIGO");
+	draw_text(x+COLUMN_NAME,y+320,"NOME");
 	draw_text(x+COLUMN_HP,y+320,"HP");
 	draw_text(x+COLUMN_MP,y+320,"MP");
 }

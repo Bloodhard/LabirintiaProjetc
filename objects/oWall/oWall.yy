@@ -6,8 +6,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objetos",
-    "path": "folders/Objetos.yy",
+    "name": "Cenarios",
+    "path": "folders/Objetos/Cenarios.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,5 +30,5 @@
     "path": "sprites/CONCRETE_1A/CONCRETE_1A.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

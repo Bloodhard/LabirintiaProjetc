@@ -135,7 +135,7 @@ function BattleStateSelectAction()
 					//(here)
 					
 					//add back option at the end of each submenu
-					array_push(_subMenus[$ _subMenusArray[i]], ["Back", MenuGoBack, -1, true]);
+					array_push(_subMenus[$ _subMenusArray[i]], ["Voltar", MenuGoBack, -1, true]);
 					// add submenu into main menu
 					array_push(_menuOptions, [_subMenusArray[i], SubMenu, [_subMenus[$ _subMenusArray[i]]], true]);
 			}

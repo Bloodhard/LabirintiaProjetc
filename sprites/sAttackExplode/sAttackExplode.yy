@@ -45,7 +45,7 @@
   "origin": 0,
   "parent": {
     "name": "BattleEffects",
-    "path": "folders/Sprites/BattleEffects.yy",
+    "path": "folders/Particle Systems/BattleEffects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

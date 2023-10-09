@@ -29,8 +29,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "pSpriteZhara_WalkDown64x64",
-    "path": "sprites/pSpriteZhara_WalkDown64x64/pSpriteZhara_WalkDown64x64.yy",
+    "name": "pSpriteZhara_WalkDown",
+    "path": "sprites/pSpriteZhara_WalkDown/pSpriteZhara_WalkDown.yy",
   },
   "spriteMaskId": null,
   "visible": true,

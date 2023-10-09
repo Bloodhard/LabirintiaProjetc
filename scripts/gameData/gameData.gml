@@ -260,51 +260,6 @@ global.enemies = {
 	}
 }
 
-/*
-global.skills = 
 
-{
-	Pound:
-	{
-		Type: Corte,
-		DPS: 5,
-		mpCost: 0
-	},
-	Slash:
-	{
-		Type: Corte,
-		DPS: 20,
-		mpCost: 15
-	},
-	Slam:
-	{
-		Type: Esmagamento,
-		DPS: 40,
-		mpCost: 30
-	},
-	
-	FireBall:
-	{
-		Type: Magico,
-		DPS: 30,
-		mpCost: 10
-	},
-	
-	Cure:
-	{
-		Type: Suporte,
-		hp: +30,
-		mpCost: 20
-	},
-	
-	Dark:
-	{
-		Type: Magico,
-		DPS: 30,
-		mpCost: 10
-	}
-		
-	
-}
 
 	

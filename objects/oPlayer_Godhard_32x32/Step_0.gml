@@ -11,19 +11,16 @@
 		xspd = (right_key - left_key) * move_spd;
 		yspd = (down_key - up_key) * move_spd;
 	}
+	
+
+	// New Position
+	var _newTileX = to_tile(x)
 
 
 	//Colisão	
-	function Colissao (){
-		if place_meeting(x + xspd, y, oWall)
-			{
-			xspd = 0;	
-			}
-		if place_meeting(x, y + yspd, oWall)
-			{
-			yspd = 0;
-			}
-	}
+	var _col = collision(__newTileX, _newTileY);
+	
+	
 	
 	//move the player
 	function Movimentar (){

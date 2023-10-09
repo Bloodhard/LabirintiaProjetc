@@ -13,8 +13,8 @@ sprite [DOWN] = pSprite_WalkDown32x32;
 
 
 sprite [RIGHT] = pSpriteZhara_WalkRight64x64;
-sprite [UP] = pSpriteZhara_WalkUp64x64;
+sprite [UP] = pSpriteZhara_WalkUp32x32;
 sprite [LEFT] = pSpriteZhara_WalkLeft64x64;
-sprite [DOWN] = pSpriteZhara_WalkDown64x64;
+sprite [DOWN] = pSpriteZhara_WalkDown;
 
 face = DOWN;
