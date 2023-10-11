@@ -1,3 +1,10 @@
+//Pause
+if (global.paused){
+	set_state(states.idle);
+	sprite_index = get_sprite(moveDirection);
+	exit;
+}
+
 if (inputX != 0 || inputY != 0){
 	if (!moving){
 		//Prefer X over Y

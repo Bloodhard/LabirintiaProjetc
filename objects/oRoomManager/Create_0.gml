@@ -1,9 +1,4 @@
-//var _w = global.res.width;
-
-//var _h = global.res.height;
-
-//camera = camera_create_view(0,0, _w, _h, 0, oMainCharacter, -1, -1, _w /2 , _h/2);
-
+global.paused = false;
 
 //Collision Tilemap
 colTilemap = layer_tilemap_get_id("TilesCollision");
@@ -17,9 +12,9 @@ colTilemap = layer_tilemap_get_id("TilesCollision");
 //mp_grid_add_instances(global.AIGrid, oCollision, false);
 
 //for (var _x = 0; x <_gridWidth; _x ++) {
-//	for (var _y = 0; _y < _gridHeight; _y ++) {
-//		var _col = tilemap_get(colTilemap, _x, _y);
+//for (var _y = 0; _y < _gridHeight; _y ++) {
+//var _col = tilemap_get(colTilemap, _x, _y);
 		
-//		if (_col) mp_grid_add_cell(global.AIGrid, _x, _y);
-//	}
+//if (_col) mp_grid_add_cell(global.AIGrid, _x, _y);
+//}
 //}
