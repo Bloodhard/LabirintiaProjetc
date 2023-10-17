@@ -8,10 +8,10 @@ acceleration_ = .5;
 instance_create_layer(x, y, "Instances", oCamera);
 
 
-sprite [RIGHT] = pSpriteGodhard_WalkRight32x32;
-sprite [UP] = pSpriteGodhard_WalkUp32x32;
-sprite [LEFT] = pSpriteGodhard_WalkLeft32x32;
-sprite [DOWN] = pSpriteGodhard_WalkDown32x32;
+sprite [RIGHT] = pSpriteZhara_WalkLeft32x32;
+sprite [UP] = pSpriteZhara_WalkUp32x32;
+sprite [LEFT] = pSpriteZhara_WalkRight32x32;
+sprite [DOWN] = pSprite_Zhara_WalkDown32x32;
 
 
 /*

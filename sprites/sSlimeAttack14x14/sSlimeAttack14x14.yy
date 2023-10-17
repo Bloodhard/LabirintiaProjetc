@@ -33,8 +33,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "grupo1",
-    "path": "folders/Sprites/Inimigos/Slime/grupo1.yy",
+    "name": "Slime14x14",
+    "path": "folders/Sprites/Inimigos/Slime/Slime14x14.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

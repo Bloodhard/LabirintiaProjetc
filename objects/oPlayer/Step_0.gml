@@ -33,6 +33,9 @@ if (x_speed_ > 0) {
 // Move horizontally
 x += x_speed_;
 
+
+
+
 // Right collisions
 if x_speed_ > 0 {
 	if (grid_place_meeting(self, o_level.grid_)) {
@@ -42,11 +45,11 @@ if x_speed_ > 0 {
 	}
 } else if x_speed_ < 0 {
 	// Left collisions
-	if (grid_place_meeting(self, o_level.grid_)) {
+     if (grid_place_meeting(self, o_level.grid_)) {
 		x = bbox_left&~(CELL_WIDTH-1);
 		x += CELL_WIDTH+x-bbox_left;
 		x_speed_ = 0;
-	}
+	 }
 }
 
 // Move vertically

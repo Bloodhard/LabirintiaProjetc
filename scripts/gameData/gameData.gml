@@ -257,6 +257,32 @@ global.enemies = {
 		}
 		
 
+	},
+	MinotauroG: 
+	{
+		name: "Minotauro [BOSS]",
+		classe: "Monster",
+		hp: 2000,
+		hpMax: 2000,
+		mp: 100,
+		mpMax: 100,
+		strength: 500,
+		sprites: { idle: Minotauro128x128, attack: Minotauro128x128},
+		actions: [global.actionLibrary.attack],
+		xpValue : 1000,
+		AIscript : function()
+		{
+			//Ataca um membro da equipe do jogador
+			var _action = actions [0];
+			var _possibleTargets = array_filter(oBattle.partyUnits, function(_unit,_index)
+			{
+				return (_unit.hp > 0);
+			});
+			var _target = _possibleTargets[irandom(array_length(_possibleTargets)-1)];
+			return [_action, _target];
+		}
+		
+
 	}
 }
 

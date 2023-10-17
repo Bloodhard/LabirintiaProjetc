@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oWarpBlock",
+  "name": "oWarpBlock_to_Labiritnto",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_porta",
-    "path": "sprites/s_porta/s_porta.yy",
+    "name": "s_Labirinto",
+    "path": "sprites/s_Labirinto/s_Labirinto.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -1,3 +1,4 @@
+depth = -y * 2;
 xspd = 0;
 yspd = 0;
 
@@ -12,9 +13,9 @@ sprite [DOWN] = pSprite_WalkDown32x32;
 */
 
 
-sprite [RIGHT] = pSpriteGodhard_WalkRight64x64;
-sprite [UP] = pSpriteGodhard_WalkUp64x64;
-sprite [LEFT] = pSpriteGodhard_WalkLeft64x64;
-sprite [DOWN] = pSpriteGodhard_WalkDown64x64;
+sprite [RIGHT] = pSpriteZhara_WalkLeft32x32;
+sprite [UP] = pSpriteZhara_WalkUp32x32;
+sprite [LEFT] = pSpriteZhara_WalkRight32x32;
+sprite [DOWN] = pSprite_Zhara_WalkDown32x32;
 
 face = DOWN;

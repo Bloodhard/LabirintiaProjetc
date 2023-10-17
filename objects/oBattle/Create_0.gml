@@ -249,12 +249,27 @@ function BattleStateTurnProgression()
 		 }
 	}
 	
+	var contadorUnidadeDerrotados = 0;
+	// Verificar todos as unidades na array partyUnits foram derrotadas
+	for (var i = 0; i < array_length(partyUnits); i++) 
+	{
+		 var Unidade = partyUnits[i];
+		 
+		 if (Unidade.hp <= 0) 
+		 {
+		 // Inimigo derrotado, aumentar o contador
+		 contadorUnidadeDerrotados++;
+		 }
+	}
+	
 	// Verificar se todos os inimigos estão derrotados
 	if (contadorInimigosDerrotados == array_length(enemiesUnits)){
 		 instance_deactivate_all(true);
 		 instance_destroy();
 		 instance_activate_all();
 		 display_set_gui_size(320,180);
+	} else if (contadorUnidadeDerrotados == array_length(partyUnits)){
+		game_restart();
 	}
 	
 	//Loop turns

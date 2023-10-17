@@ -29,8 +29,8 @@
   "properties": [],
   "solid": true,
   "spriteId": {
-    "name": "pSpriteGodhard_WalkDown32x32",
-    "path": "sprites/pSpriteGodhard_WalkDown32x32/pSpriteGodhard_WalkDown32x32.yy",
+    "name": "pSprite_Zhara_WalkDown32x32",
+    "path": "sprites/pSprite_Zhara_WalkDown32x32/pSprite_Zhara_WalkDown32x32.yy",
   },
   "spriteMaskId": null,
   "visible": true,
