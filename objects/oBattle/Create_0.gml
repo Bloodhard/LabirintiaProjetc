@@ -237,15 +237,18 @@ function BattleStateTurnProgression()
 	turn++;
 	
 	var contadorInimigosDerrotados = 0;
+	//var contadorBossDerrotado = 0;
 	// Verificar todos os inimigos na array enemiesUnits
 	for (var i = 0; i < array_length(enemiesUnits); i++) 
 	{
 		 var inimigo = enemiesUnits[i];
 		 
-		 if (inimigo.hp <= 0) 
+		 if (inimigo.hp <= 0 && inimigo.name == "Slime")
 		 {
-		 // Inimigo derrotado, aumentar o contador
-		 contadorInimigosDerrotados++;
+			// Inimigo derrotado, aumentar o contador
+			contadorInimigosDerrotados++;
+		 }else if (inimigo.hp <= 0 && inimigo.name == "Minotauro[BOSS]"){
+			game_restart();
 		 }
 	}
 	

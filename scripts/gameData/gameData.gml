@@ -260,13 +260,13 @@ global.enemies = {
 	},
 	MinotauroG: 
 	{
-		name: "Minotauro [BOSS]",
+		name: "Minotauro[BOSS]",
 		classe: "Monster",
-		hp: 2000,
-		hpMax: 2000,
+		hp: 10,
+		hpMax: 10,
 		mp: 100,
 		mpMax: 100,
-		strength: 500,
+		strength: 40,
 		sprites: { idle: Minotauro128x128, attack: Minotauro128x128},
 		actions: [global.actionLibrary.attack],
 		xpValue : 1000,
