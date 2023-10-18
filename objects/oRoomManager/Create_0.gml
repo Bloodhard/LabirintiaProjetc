@@ -4,6 +4,7 @@ global.paused = false;
 colTilemap = layer_tilemap_get_id("TilesCollision");
 
 // MP Grid
+
 //var _gridWidth = to_tile(room_width);
 //var _gridHeight = to_tile(room_height);
 //global.AIGrid = mp_grid_create(0,0, _gridWidth, _gridHeight, TILESIZE, TILESIZE);

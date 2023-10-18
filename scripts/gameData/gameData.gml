@@ -21,7 +21,7 @@ global.actionLibrary =
 	{
 		name: "Gelo",
 		description : "{0} conjura Gelo!",
-		subMenu: "Magic",
+		subMenu: "Magia",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -40,7 +40,7 @@ global.actionLibrary =
 	{
 		name: "Fogo",
 		description : "{0} ataca com Fogo!",
-		subMenu: "Magic",
+		subMenu: "Magia",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -59,7 +59,7 @@ global.actionLibrary =
 	{
 		name: "Corte Divino",
 		description : "{0} Purifica os impuros!",
-		subMenu: "Magic",
+		subMenu: "Truques",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -78,7 +78,7 @@ global.actionLibrary =
 	{
 		name: "Esfera Nula",
 		description : "{0} Convoca o vazio!",
-		subMenu: "Magic",
+		subMenu: "Magia",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -98,7 +98,7 @@ global.actionLibrary =
 	{
 		name: "Golpe Surpresa",
 		description : "{0} Mira no distraido!",
-		subMenu: "Magic",
+		subMenu: "Truques",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -118,7 +118,7 @@ global.actionLibrary =
 	{
 		name: "Luz Sagrada",
 		description : "{0} Traz retribuicao divina!",
-		subMenu: "Magic",
+		subMenu: "Magia",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: true, //0: party/self, 1: enemy
@@ -138,11 +138,11 @@ global.actionLibrary =
 	{
 		name: "Cura",
 		description : "{0} Renova o espirito dos caidos!",
-		subMenu: "Magic",
+		subMenu: "Magia",
 		mpCost: 4,
 		targetRequired: true,
 		targetEnemyByDefault: false, //0: party/self, 1: enemy
-		targetAll: MODE.VARIES,
+		targetAll: MODE.NEVER,
 		userAnimation: "cast",
 		effectSprite: sHealGround,
 		effectOnTarget : MODE.ALWAYS,
@@ -154,6 +154,65 @@ global.actionLibrary =
 		}
 	},
 	
+	potionhp :
+	{
+		name: "Pocao de Cura",
+		description : "{0} Utiliza uma pocao de cura!",
+		subMenu: "Item",
+		mpCost: 0,
+		targetRequired: true,
+		targetEnemyByDefault: false, //0: party/self, 1: enemy
+		targetAll: MODE.NEVER,
+		userAnimation: "cast",
+		effectSprite: noone,
+		effectOnTarget : MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			var _heal = 30;
+			BattleChangeHP(_targets[0], +_heal);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	assassinate :
+	{
+		name: "Assassinar",
+		description : "{0} Hora do Massacre!",
+		subMenu: "Truques",
+		mpCost: 100,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
+		effectSprite: sAttackKnnovar,
+		effectOnTarget : MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.strength + 500 + random_range(-_user.strength * 0.25, _user.strength * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
+	
+	divineSupreme :
+	{
+		name: "Expurgar",
+		description : "{0} Que a luz divina caia perante meus inimigos!",
+		subMenu: "Truques",
+		mpCost: 100,
+		targetRequired: true,
+		targetEnemyByDefault: true, //0: party/self, 1: enemy
+		targetAll: MODE.NEVER,
+		userAnimation: "attack",
+		effectSprite: sDivineSu,
+		effectOnTarget : MODE.ALWAYS,
+		func : function(_user, _targets)
+		{
+			var _damage = ceil(_user.strength + 500 + random_range(-_user.strength * 0.25, _user.strength * 0.25));
+			BattleChangeHP(_targets[0], -_damage);
+			//BattleChangeMP(_user, -mpCost)
+		}
+	},
 	
 	
 }
@@ -177,8 +236,8 @@ global.party =
 		mpMax: 200,
 		strength: 2,
 		inteligence: 30,
-		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: pSpriteGodhard_WalkRight64x64, cast: pSpriteGodhard_Cast},
-		actions:[global.actionLibrary.attack, global.actionLibrary.hollyA, global.actionLibrary.heal]
+		sprites: { idle: pSpriteGodhard_WalkRight64x64 , attack: pSpriteGodhard_WalkDown64x64, defend: pSpriteGodhard_WalkRight64x64, down: sSprite_Godhard_Dead, cast: pSpriteGodhard_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.hollyA, global.actionLibrary.heal, global.actionLibrary.potionhp]
 	},
 	{
 		name: "Knovar",
@@ -189,8 +248,8 @@ global.party =
 		mpMax: 200,
 		strength: 25,
 		inteligence: 10,
-		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_Attack, defend: pSpriteKnovar_WalkRight64x64, down: pSpriteKnovar_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.surprise]
+		sprites: { idle: pSpriteKnovar_WalkRight64x64 , attack: pSpriteKnovar_Attack, defend: pSpriteKnovar_WalkRight64x64, down: sSprite_Knnovar_Dead},
+		actions:[global.actionLibrary.attack, global.actionLibrary.surprise, global.actionLibrary.potionhp, global.actionLibrary.assassinate]
 	},
 	{
 		name: "Zhara",
@@ -201,8 +260,8 @@ global.party =
 		mpMax: 200,
 		strength: 30,
 		inteligence: 10,
-		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_Attack, defend: pSpriteZhara_WalkRight64x64, down: pSpriteZhara_WalkRight64x64},
-		actions:[global.actionLibrary.attack, global.actionLibrary.divineSlash]
+		sprites: { idle: pSpriteZhara_WalkRight64x64 , attack: pSpriteZhara_Attack, defend: pSpriteZhara_WalkRight64x64, down: sSprite_Zhara_Dead},
+		actions:[global.actionLibrary.attack, global.actionLibrary.divineSlash, global.actionLibrary.divineSupreme, global.actionLibrary.potionhp]
 	},
 	{
 		name: "Hito",
@@ -213,8 +272,8 @@ global.party =
 		mpMax: 200,
 		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: pSpriteHito_WalkRight64x64, cast: pSpriteHito_Cast},
-		actions:[global.actionLibrary.attack, global.actionLibrary.ice, global.actionLibrary.fire]
+		sprites: { idle: pSpriteHito_WalkRight64x64 , attack: pSpriteHito_WalkDown64x64, defend: pSpriteHito_WalkRight64x64, down: sSprite_Hito_Dead, cast: pSpriteHito_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.ice, global.actionLibrary.fire, global.actionLibrary.potionhp]
 	},
 	{
 		name: "Corvo",
@@ -225,8 +284,8 @@ global.party =
 		mpMax: 200,
 		strength: 5,
 		inteligence: 20,
-		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: pSpriteMudinho_WalkRight64x64, cast: pSpriteMudinho_Cast},
-		actions:[global.actionLibrary.attack, global.actionLibrary.darkBall]
+		sprites: { idle: pSpriteMudinho_WalkRight64x64 , attack: pSpriteMudinho_WalkDown64x64, defend: pSpriteMudinho_WalkRight64x64, down: sSprite_Corvo_Dead, cast: pSpriteMudinho_Cast},
+		actions:[global.actionLibrary.attack, global.actionLibrary.darkBall, global.actionLibrary.potionhp]
 	},
 ]
 
@@ -262,11 +321,11 @@ global.enemies = {
 	{
 		name: "Minotauro[BOSS]",
 		classe: "Monster",
-		hp: 10,
-		hpMax: 10,
+		hp: 2000,
+		hpMax: 2000,
 		mp: 100,
 		mpMax: 100,
-		strength: 40,
+		strength: 500,
 		sprites: { idle: Minotauro128x128, attack: Minotauro128x128},
 		actions: [global.actionLibrary.attack],
 		xpValue : 1000,

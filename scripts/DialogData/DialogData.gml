@@ -146,7 +146,7 @@ global.dialogue.guide_meet =
 },
 {
 	speaker: _speakers.guia,
-	message: "Voce esta em uma sala deslocada do espaço-tempo, conhecida como Lobby"
+	message: "Voce esta em uma sala deslocada do espaco-tempo, conhecida como Lobby"
 },
 {
 	speaker: _speakers.guia,
@@ -163,6 +163,14 @@ global.dialogue.guide_meet =
 {
 	speaker: _speakers.guia,
 	message: "Depois de conversar com todos aqui, me procure no final desta estrada, estarei esperando por voces"
+},
+{
+	speaker: _speakers.system,
+	message: "Utilize as setas direcionais do Teclado para se movimentar pelo mapa"
+},
+{
+	speaker: _speakers.system,
+	message: "Ao se aproximar de alguem, aperte a tecla ENTER para interagir"
 }
 ]
 
@@ -230,6 +238,34 @@ global.dialogue.guide_explain =
 },
 {
 	speaker: _speakers.godhard,
+	message: "Mas olhe pelo lado bom..."
+},
+{
+	speaker: _speakers.zhara,
+	message: "O que?"
+},
+{
+	speaker: _speakers.godhard,
+	message: "Eu so digo a frase, voce procura o lado bom kkkkkkkkkkkk"
+},
+{
+	speaker: _speakers.zhara,
+	message: "..."
+},
+{
+	speaker: _speakers.knnovar,
+	message: "..."
+},
+{
+	speaker: _speakers.hito,
+	message: "..."
+},
+{
+	speaker: _speakers.corvo,
+	message: "..."
+},
+{
+	speaker: _speakers.godhard,
 	message: "Nossa composicao de grupo nos tras pelomenos 90% de chance de voltarmos vivos"
 },
 {
@@ -239,6 +275,30 @@ global.dialogue.guide_explain =
 {
 	speaker: _speakers.zhara,
 	message: "Vamos, para a batalha que nos aguarda!"
+},
+{
+	speaker: _speakers.system,
+	message: "Voce esta prestes a entrar em um ambiente hostil, inimigos estao a sua espera!"
+},
+{
+	speaker: _speakers.system,
+	message: "Encoste em um inimigo para iniciar uma batalha, uma vez dentro dela, nao sera capaz de sair ate derrotar todos"
+},
+{
+	speaker: _speakers.system,
+	message: "Utilize as setas direcionais do Teclado para navegar entre os menus no seu turno"
+},
+{
+	speaker: _speakers.system,
+	message: "Utilize a tecla ENTER para selecionar o menu desejado"
+},
+{
+	speaker: _speakers.system,
+	message: "Em batalha, algumas habilidades permitem o uso da tecla SHIFT para selecionar varios alvos (WIP)"
+},
+{
+	speaker: _speakers.system,
+	message: "Caso queira retornar para o menu anterior, use a opcao Voltar ou aperte a tecla ESC"
 }
 ]
 
