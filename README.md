@@ -18,7 +18,7 @@
  ![image](https://github.com/user-attachments/assets/693b7d9b-fe3e-4dea-a24a-0447eff29af3)
 # ARTE DO PROJETO:
  ![image](https://github.com/user-attachments/assets/07b62bd0-6887-463d-bf86-2d5c34a92f7c)
-#CONSIDERAÇÕES FINAIS:
+# CONSIDERAÇÕES FINAIS:
  O maior desafio encontrado durante o desenvolvimento deste projeto, foi o desenvolvimento de um jogo Old-school com as tecnologias atuais.
 
  ![image](https://github.com/user-attachments/assets/a4a72719-aec6-470f-8509-6f87a1f22979)
