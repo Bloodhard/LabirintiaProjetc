@@ -20,7 +20,7 @@
  ![image](https://github.com/user-attachments/assets/07b62bd0-6887-463d-bf86-2d5c34a92f7c)
 # CONSIDERAÇÕES FINAIS:
  O maior desafio encontrado durante o desenvolvimento deste projeto, foi o desenvolvimento de um jogo Old-school com as tecnologias atuais.
-
+ ![link](https://docs.google.com/document/d/1p4MsHJ14ViwGPvosmpgw8qaPrGBQwP0TNXPl5utqmhk/edit?usp=sharing)
  ![image](https://github.com/user-attachments/assets/a4a72719-aec6-470f-8509-6f87a1f22979)
 
 
