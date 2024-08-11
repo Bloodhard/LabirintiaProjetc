@@ -1,5 +1,5 @@
 # DESENVOLVIMENTO DE SOFTWARE[TCC]: JOGO COM MAPA PROCEDURAL E INTELIGENCIA ARTIFICIAL:
- Jogo RPG inspirado em Final Fantasy I e II, com mapa procedural e agente reativo simples. O foco deste projeto é a inserção de jogos de um gênero “datado”, mantendo a essência “saudosista”, porém, com abordagens modernas para o cenário atual do mercado, tanto visualmente quanto no desenvolvimento.
+ Projeto de desenvolvimento de jogo do genero RPG inspirado em Final Fantasy I e II, com mapa procedural e agente reativo simples. O foco deste projeto é a inserção de jogos de um gênero “datado”, mantendo a essência “saudosista”, porém, com abordagens modernas para o cenário atual do mercado, tanto visualmente quanto no desenvolvimento.
 # TECNOLOGIAS UTILIZADAS:
  - GAME MAKER STUDIO 2
  - GML (Game Maker Language)
